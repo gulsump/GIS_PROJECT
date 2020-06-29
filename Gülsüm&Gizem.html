@@ -1,0 +1,936 @@
+<!DOCTYPE html>
+<head>    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    
+        <script>
+            L_NO_TOUCH = false;
+            L_DISABLE_3D = false;
+        </script>
+    
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.6.0/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.6.0/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://rawcdn.githack.com/python-visualization/folium/master/folium/templates/leaflet.awesome.rotate.css"/>
+    <style>html, body {width: 100%;height: 100%;margin: 0;padding: 0;}</style>
+    <style>#map {position:absolute;top:0;bottom:0;right:0;left:0;}</style>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_1dcaa08d60914a31be0de04da137e70a {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+            </style>
+        
+</head>
+<body>    
+    
+            <div class="folium-map" id="map_1dcaa08d60914a31be0de04da137e70a" ></div>
+        
+</body>
+<script>    
+    
+            var map_1dcaa08d60914a31be0de04da137e70a = L.map(
+                "map_1dcaa08d60914a31be0de04da137e70a",
+                {
+                    center: [39.93495537428379, 32.74075984954834],
+                    crs: L.CRS.EPSG3857,
+                    zoom: 11,
+                    zoomControl: true,
+                    preferCanvas: false,
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_175652eb911a43ad96cb7007648e7b23 = L.tileLayer(
+                "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {"attribution": "Data by \u0026copy; \u003ca href=\"http://openstreetmap.org\"\u003eOpenStreetMap\u003c/a\u003e, under \u003ca href=\"http://www.openstreetmap.org/copyright\"\u003eODbL\u003c/a\u003e.", "detectRetina": false, "maxNativeZoom": 18, "maxZoom": 18, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+            ).addTo(map_1dcaa08d60914a31be0de04da137e70a);
+        
+    
+            var feature_group_a5cef84e234b4944a57d7d4ce7867d14 = L.featureGroup(
+                {}
+            ).addTo(map_1dcaa08d60914a31be0de04da137e70a);
+        
+    
+        function geo_json_142f330028234c6bab188a79c8649f0e_onEachFeature(feature, layer) {
+            layer.on({
+                click: function(e) {
+                    map_1dcaa08d60914a31be0de04da137e70a.fitBounds(e.target.getBounds());
+                }
+            });
+        };
+        var geo_json_142f330028234c6bab188a79c8649f0e = L.geoJson(null, {
+                onEachFeature: geo_json_142f330028234c6bab188a79c8649f0e_onEachFeature,
+            
+        }).addTo(feature_group_a5cef84e234b4944a57d7d4ce7867d14);
+
+        function geo_json_142f330028234c6bab188a79c8649f0e_add (data) {
+            geo_json_142f330028234c6bab188a79c8649f0e.addData(data);
+        }
+            geo_json_142f330028234c6bab188a79c8649f0e_add({"features": [{"geometry": {"coordinates": [[32.55889803171158, 39.987695235929884], [32.57419601082802, 39.98561034419622], [32.58536506444216, 39.98409107670452], [32.598346285521984, 39.98232283697869], [32.613295912742615, 39.98154004938199], [32.62742813676596, 39.981107161677905], [32.647865898907185, 39.980479276953176], [32.66273304820061, 39.97963480914386], [32.694237269461155, 39.98073772774724], [32.70349022001028, 39.971484528994765], [32.71531205624342, 39.9676775460171], [32.72682476788759, 39.96826854674766], [32.74493470788002, 39.970194145856254], [32.76663511991501, 39.97180236753804], [32.78308879584074, 39.969294820224], [32.79435306787491, 39.96538904020867], [32.804522998631, 39.961948685450935], [32.81702410429716, 39.95716947099525], [32.834225445985794, 39.951562841944174], [32.84404367208481, 39.944352578640085], [32.85041190683842, 39.93967932996925], [32.85508397966623, 39.92815241835969], [32.85406172275543, 39.92083657743869], [32.84345358610153, 39.915245743256484], [32.82810464501381, 39.91570322034185], [32.80779059976339, 39.91088399967586], [32.79637511819601, 39.90889989434293], [32.78389982879162, 39.908346957795786], [32.76582878082991, 39.90758827015414], [32.75007650256157, 39.906958424437406], [32.733068615198135, 39.90625270230861], [32.707952074706554, 39.90527975058802], [32.69201438874006, 39.897497954404066], [32.68642030656337, 39.88688983115354]], "type": "LineString"}, "properties": {}, "type": "Feature"}], "type": "FeatureCollection"});
+        
+    
+            var marker_6202eb3a3f804ba8bb57d3cfa693772e = L.marker(
+                [39.98769523592989, 32.55889803171158],
+                {}
+            ).addTo(feature_group_a5cef84e234b4944a57d7d4ce7867d14);
+        
+    
+            var icon_e372d09bcd6f4891b51283b9efcb9ff7 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_6202eb3a3f804ba8bb57d3cfa693772e.setIcon(icon_e372d09bcd6f4891b51283b9efcb9ff7);
+        
+    
+        var popup_e54700e47f97477aad7c8ff5438e71d5 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_ab5207c44596409f8654952fd914d821 = $(`<div id="html_ab5207c44596409f8654952fd914d821" style="width: 100.0%; height: 100.0%;"><b>Station Name: </b>OSB METRO<br> <img src=https://www.tazeyorum.com/images/show/places/36934/200_200/177f7b81786ea98ff5f9f5af51c2104e.png height=250 width=400></div>`)[0];
+            popup_e54700e47f97477aad7c8ff5438e71d5.setContent(html_ab5207c44596409f8654952fd914d821);
+        
+
+        marker_6202eb3a3f804ba8bb57d3cfa693772e.bindPopup(popup_e54700e47f97477aad7c8ff5438e71d5)
+        ;
+
+        
+    
+    
+            var marker_39cb70ce7444457dbeb1b25e50289b68 = L.marker(
+                [39.98561034419622, 32.57419601082802],
+                {}
+            ).addTo(feature_group_a5cef84e234b4944a57d7d4ce7867d14);
+        
+    
+            var icon_3e192645265147bc88bc976f8fba270c = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_39cb70ce7444457dbeb1b25e50289b68.setIcon(icon_3e192645265147bc88bc976f8fba270c);
+        
+    
+        var popup_3f9766e3b1bf4a5396bb6f175087d984 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_8612e1efc1f2406d9d490bc2af3a0ea6 = $(`<div id="html_8612e1efc1f2406d9d490bc2af3a0ea6" style="width: 100.0%; height: 100.0%;"><b>Station Name: </b>GOP<br> <img src=https://fastly.4sqi.net/img/general/600x600/79330397_bcau4YF8BukktmASdlIEQP2q3V-LqM2cPBBSkhAMtXw.jpg height=250 width=400></div>`)[0];
+            popup_3f9766e3b1bf4a5396bb6f175087d984.setContent(html_8612e1efc1f2406d9d490bc2af3a0ea6);
+        
+
+        marker_39cb70ce7444457dbeb1b25e50289b68.bindPopup(popup_3f9766e3b1bf4a5396bb6f175087d984)
+        ;
+
+        
+    
+    
+            var marker_5473ed76e65641fbb53a8e44f1dd90e4 = L.marker(
+                [39.98409107670452, 32.585365064442165],
+                {}
+            ).addTo(feature_group_a5cef84e234b4944a57d7d4ce7867d14);
+        
+    
+            var icon_5aeed2051442448b810eb9b94c268787 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_5473ed76e65641fbb53a8e44f1dd90e4.setIcon(icon_5aeed2051442448b810eb9b94c268787);
+        
+    
+        var popup_d2ef599f35be4919aeaeccb7e2b990bf = L.popup({"maxWidth": "100%"});
+
+        
+            var html_f3e70fd05039487eab71c418cab4859f = $(`<div id="html_f3e70fd05039487eab71c418cab4859f" style="width: 100.0%; height: 100.0%;"><b>Station Name: </b>FATİH<br> <img src=https://www.alfahaberajansi.com/images/haberler/2019/11/ankara_metro_hatlari_duraklari_ve_rayli_sistemler_haritasi_h5_50224.jpg height=250 width=400></div>`)[0];
+            popup_d2ef599f35be4919aeaeccb7e2b990bf.setContent(html_f3e70fd05039487eab71c418cab4859f);
+        
+
+        marker_5473ed76e65641fbb53a8e44f1dd90e4.bindPopup(popup_d2ef599f35be4919aeaeccb7e2b990bf)
+        ;
+
+        
+    
+    
+            var marker_305c58fe99f446239b431a617a15bc10 = L.marker(
+                [39.98232283697869, 32.598346285521984],
+                {}
+            ).addTo(feature_group_a5cef84e234b4944a57d7d4ce7867d14);
+        
+    
+            var icon_65731a092bc840918022f3b3184d7685 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_305c58fe99f446239b431a617a15bc10.setIcon(icon_65731a092bc840918022f3b3184d7685);
+        
+    
+        var popup_44d289455695472fa29027b2de62c707 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_49ac1926e0c746edb4e2008de37b3f52 = $(`<div id="html_49ac1926e0c746edb4e2008de37b3f52" style="width: 100.0%; height: 100.0%;"><b>Station Name: </b>HARİKALARDİYARI<br> <img src=https://www.alfahaberajansi.com/images/haberler/2019/11/ankara_metro_hatlari_duraklari_ve_rayli_sistemler_haritasi_h5_50224.jpg height=250 width=400></div>`)[0];
+            popup_44d289455695472fa29027b2de62c707.setContent(html_49ac1926e0c746edb4e2008de37b3f52);
+        
+
+        marker_305c58fe99f446239b431a617a15bc10.bindPopup(popup_44d289455695472fa29027b2de62c707)
+        ;
+
+        
+    
+    
+            var marker_6321ef8caa1547df8f6d4adf2e01739a = L.marker(
+                [39.98154004938199, 32.61329591274261],
+                {}
+            ).addTo(feature_group_a5cef84e234b4944a57d7d4ce7867d14);
+        
+    
+            var icon_cd02e4f5f7804d5a953c33db601b68a0 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_6321ef8caa1547df8f6d4adf2e01739a.setIcon(icon_cd02e4f5f7804d5a953c33db601b68a0);
+        
+    
+        var popup_78c53578a35c4f948fdb92f1c19fc1a6 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_c82ab5aa957e4fc58c0bba96cf26bff8 = $(`<div id="html_c82ab5aa957e4fc58c0bba96cf26bff8" style="width: 100.0%; height: 100.0%;"><b>Station Name: </b>DEVLET MAHALLESİ<br> <img src=http://wowturkey.com/tr806/mahmut11_DEVLET.jpg height=250 width=400></div>`)[0];
+            popup_78c53578a35c4f948fdb92f1c19fc1a6.setContent(html_c82ab5aa957e4fc58c0bba96cf26bff8);
+        
+
+        marker_6321ef8caa1547df8f6d4adf2e01739a.bindPopup(popup_78c53578a35c4f948fdb92f1c19fc1a6)
+        ;
+
+        
+    
+    
+            var marker_d9ab1bb7baf949b8b32cfce68ada183e = L.marker(
+                [39.981107161677905, 32.627428136765964],
+                {}
+            ).addTo(feature_group_a5cef84e234b4944a57d7d4ce7867d14);
+        
+    
+            var icon_2c2d94f7a8844cfb8b5550700356718b = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_d9ab1bb7baf949b8b32cfce68ada183e.setIcon(icon_2c2d94f7a8844cfb8b5550700356718b);
+        
+    
+        var popup_29ac5b87bba142408b6cba823d12f72b = L.popup({"maxWidth": "100%"});
+
+        
+            var html_b56d9243471049bf86fd805db95ef64a = $(`<div id="html_b56d9243471049bf86fd805db95ef64a" style="width: 100.0%; height: 100.0%;"><b>Station Name: </b>ERYAMAN5<br> <img src=https://fastly.4sqi.net/img/general/600x600/189856358_f0_SwZW_2kCjVuYq_WLe1mpWfT4Hp2-Y0nqMJ5epPww.jpg height=250 width=400></div>`)[0];
+            popup_29ac5b87bba142408b6cba823d12f72b.setContent(html_b56d9243471049bf86fd805db95ef64a);
+        
+
+        marker_d9ab1bb7baf949b8b32cfce68ada183e.bindPopup(popup_29ac5b87bba142408b6cba823d12f72b)
+        ;
+
+        
+    
+    
+            var marker_1d3812dd4e804609af413310a746b6e4 = L.marker(
+                [39.980479276953176, 32.647865898907185],
+                {}
+            ).addTo(feature_group_a5cef84e234b4944a57d7d4ce7867d14);
+        
+    
+            var icon_4316496643e84414ad6f0d68cb2da519 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_1d3812dd4e804609af413310a746b6e4.setIcon(icon_4316496643e84414ad6f0d68cb2da519);
+        
+    
+        var popup_627def05177f4d0c92749421d35cb1d2 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_2fd3329d6d344e8d8c1b650deb58a249 = $(`<div id="html_2fd3329d6d344e8d8c1b650deb58a249" style="width: 100.0%; height: 100.0%;"><b>Station Name: </b>ERYAMAN 1-2<br> <img src=https://fastly.4sqi.net/img/general/200x200/38322317_jS3fyenfgNaovvejWTOaD8rx4HN2x6ey1SoMd8qe5JA.jpg height=250 width=400></div>`)[0];
+            popup_627def05177f4d0c92749421d35cb1d2.setContent(html_2fd3329d6d344e8d8c1b650deb58a249);
+        
+
+        marker_1d3812dd4e804609af413310a746b6e4.bindPopup(popup_627def05177f4d0c92749421d35cb1d2)
+        ;
+
+        
+    
+    
+            var marker_7f132049d6cd465a9380b6271942c704 = L.marker(
+                [39.97963480914386, 32.66273304820061],
+                {}
+            ).addTo(feature_group_a5cef84e234b4944a57d7d4ce7867d14);
+        
+    
+            var icon_cca2f370c7f04a17a72550fbd000bb16 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_7f132049d6cd465a9380b6271942c704.setIcon(icon_cca2f370c7f04a17a72550fbd000bb16);
+        
+    
+        var popup_610376aecca340e6962c00e754b168ca = L.popup({"maxWidth": "100%"});
+
+        
+            var html_8fdf2ba7b23d479b983fad223b50755f = $(`<div id="html_8fdf2ba7b23d479b983fad223b50755f" style="width: 100.0%; height: 100.0%;"><b>Station Name: </b>İSTANBUL YOLU<br> <img src=https://fastly.4sqi.net/img/general/200x200/60997972_zYuee5IIQZ8h1ITxOPg81iVmparergrjBE9totNHAa0.jpg height=250 width=400></div>`)[0];
+            popup_610376aecca340e6962c00e754b168ca.setContent(html_8fdf2ba7b23d479b983fad223b50755f);
+        
+
+        marker_7f132049d6cd465a9380b6271942c704.bindPopup(popup_610376aecca340e6962c00e754b168ca)
+        ;
+
+        
+    
+    
+            var marker_54889369d08f4aaba708a8189c92bc21 = L.marker(
+                [39.98073772774724, 32.694237269461155],
+                {}
+            ).addTo(feature_group_a5cef84e234b4944a57d7d4ce7867d14);
+        
+    
+            var icon_97d6477643a847af9dd7f27cc2f44875 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_54889369d08f4aaba708a8189c92bc21.setIcon(icon_97d6477643a847af9dd7f27cc2f44875);
+        
+    
+        var popup_d5e422ded1c74f24bf98a12116cf4ea4 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_9d8fea0bce5943dbb4df197a4327534c = $(`<div id="html_9d8fea0bce5943dbb4df197a4327534c" style="width: 100.0%; height: 100.0%;"><b>Station Name: </b>BOTANİK<br> <img src=http://www.zafergazetesi.org/haber_resim/Botanik-Metro-Istasyonu-nda-Yuruyen-Merdiven-Cilesi-67584.jpg height=250 width=400></div>`)[0];
+            popup_d5e422ded1c74f24bf98a12116cf4ea4.setContent(html_9d8fea0bce5943dbb4df197a4327534c);
+        
+
+        marker_54889369d08f4aaba708a8189c92bc21.bindPopup(popup_d5e422ded1c74f24bf98a12116cf4ea4)
+        ;
+
+        
+    
+    
+            var marker_1495b64900b041a786cf2275a8e5eec9 = L.marker(
+                [39.97148452899477, 32.70349022001028],
+                {}
+            ).addTo(feature_group_a5cef84e234b4944a57d7d4ce7867d14);
+        
+    
+            var icon_ed38c8505d434ef6a837787be6d6246c = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_1495b64900b041a786cf2275a8e5eec9.setIcon(icon_ed38c8505d434ef6a837787be6d6246c);
+        
+    
+        var popup_a9ff37136a5e4f438df011f4e7310346 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_5dcdb0ea0e3b418389b9a1a9e9dec2d4 = $(`<div id="html_5dcdb0ea0e3b418389b9a1a9e9dec2d4" style="width: 100.0%; height: 100.0%;"><b>Station Name: </b>MESA<br> <img src=https://fastly.4sqi.net/img/general/600x600/37487899_VkDoiMrVxmXVgaKf8t9_G9XplsY8mpzWWsTiND3mDAI.jpg height=250 width=400></div>`)[0];
+            popup_a9ff37136a5e4f438df011f4e7310346.setContent(html_5dcdb0ea0e3b418389b9a1a9e9dec2d4);
+        
+
+        marker_1495b64900b041a786cf2275a8e5eec9.bindPopup(popup_a9ff37136a5e4f438df011f4e7310346)
+        ;
+
+        
+    
+    
+            var marker_a75ec2a8bd6c450198f95cdde3ac3f11 = L.marker(
+                [39.9676775460171, 32.71531205624342],
+                {}
+            ).addTo(feature_group_a5cef84e234b4944a57d7d4ce7867d14);
+        
+    
+            var icon_ddf946a8eaf742c48444675a2ff2616a = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_a75ec2a8bd6c450198f95cdde3ac3f11.setIcon(icon_ddf946a8eaf742c48444675a2ff2616a);
+        
+    
+        var popup_0d790d0a8daa4935a86752e9cd6ebfcf = L.popup({"maxWidth": "100%"});
+
+        
+            var html_e21b9982cc8c4c09bd21607adc748197 = $(`<div id="html_e21b9982cc8c4c09bd21607adc748197" style="width: 100.0%; height: 100.0%;"><b>Station Name: </b>BATI MERKEZİ<br> <img src=http://www.ankarahaberleri.net/images/upload/image/test-surusu-ankara.jpg height=250 width=400></div>`)[0];
+            popup_0d790d0a8daa4935a86752e9cd6ebfcf.setContent(html_e21b9982cc8c4c09bd21607adc748197);
+        
+
+        marker_a75ec2a8bd6c450198f95cdde3ac3f11.bindPopup(popup_0d790d0a8daa4935a86752e9cd6ebfcf)
+        ;
+
+        
+    
+    
+            var marker_913825651524434f8534c76537e4cf4f = L.marker(
+                [39.96826854674766, 32.726824767887585],
+                {}
+            ).addTo(feature_group_a5cef84e234b4944a57d7d4ce7867d14);
+        
+    
+            var icon_4d22361433ac48f781c92e30f5bb3f05 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_913825651524434f8534c76537e4cf4f.setIcon(icon_4d22361433ac48f781c92e30f5bb3f05);
+        
+    
+        var popup_19c974d125f040fc85bbe7cced0897f3 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_d5f7c75eb0434dd4b9b6054b154e0794 = $(`<div id="html_d5f7c75eb0434dd4b9b6054b154e0794" style="width: 100.0%; height: 100.0%;"><b>Station Name: </b>BATIKENT<br> <img src=https://i2.wp.com/rayhaber.com/wp-content/uploads/2016/08/ankara-metro-hatlari-duraklari-ve-rayli-sistemler-haritasi. height=250 width=400></div>`)[0];
+            popup_19c974d125f040fc85bbe7cced0897f3.setContent(html_d5f7c75eb0434dd4b9b6054b154e0794);
+        
+
+        marker_913825651524434f8534c76537e4cf4f.bindPopup(popup_19c974d125f040fc85bbe7cced0897f3)
+        ;
+
+        
+    
+    
+            var marker_55601c14df204aa59ada3992ecfffe14 = L.marker(
+                [39.970194145856254, 32.74493470788002],
+                {}
+            ).addTo(feature_group_a5cef84e234b4944a57d7d4ce7867d14);
+        
+    
+            var icon_d21881bf2e0840fca6039555d55ebde3 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_55601c14df204aa59ada3992ecfffe14.setIcon(icon_d21881bf2e0840fca6039555d55ebde3);
+        
+    
+        var popup_611f384a94e246908ff51f706f4eaac1 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_3894c8f2e15b427cbc2020c788640dab = $(`<div id="html_3894c8f2e15b427cbc2020c788640dab" style="width: 100.0%; height: 100.0%;"><b>Station Name: </b>OSTİM<br> <img src=https://photos.wikimapia.org/p/00/01/41/19/08_big.jpg height=250 width=400></div>`)[0];
+            popup_611f384a94e246908ff51f706f4eaac1.setContent(html_3894c8f2e15b427cbc2020c788640dab);
+        
+
+        marker_55601c14df204aa59ada3992ecfffe14.bindPopup(popup_611f384a94e246908ff51f706f4eaac1)
+        ;
+
+        
+    
+    
+            var marker_2f92e9d5ab60413590b8dc8ca0ea7cba = L.marker(
+                [39.97180236753804, 32.766635119915016],
+                {}
+            ).addTo(feature_group_a5cef84e234b4944a57d7d4ce7867d14);
+        
+    
+            var icon_164cb589f95f4c8cb9d92499f0fb9938 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_2f92e9d5ab60413590b8dc8ca0ea7cba.setIcon(icon_164cb589f95f4c8cb9d92499f0fb9938);
+        
+    
+        var popup_2490ebf9c6064a12b39a76fee9a953ae = L.popup({"maxWidth": "100%"});
+
+        
+            var html_56a41a4b844442808212b0a9362ce57a = $(`<div id="html_56a41a4b844442808212b0a9362ce57a" style="width: 100.0%; height: 100.0%;"><b>Station Name: </b>MACUNKÖY<br> <img src=https://s3-media0.fl.yelpcdn.com/bphoto/-vcS2cMRLfiAYupX3n7Sgg/348s.jpg height=250 width=400></div>`)[0];
+            popup_2490ebf9c6064a12b39a76fee9a953ae.setContent(html_56a41a4b844442808212b0a9362ce57a);
+        
+
+        marker_2f92e9d5ab60413590b8dc8ca0ea7cba.bindPopup(popup_2490ebf9c6064a12b39a76fee9a953ae)
+        ;
+
+        
+    
+    
+            var marker_3e5b2d88da4e41acb7faa96c0d99e28f = L.marker(
+                [39.969294820224, 32.78308879584074],
+                {}
+            ).addTo(feature_group_a5cef84e234b4944a57d7d4ce7867d14);
+        
+    
+            var icon_716e383ab7334d71b49178cd6acd10ec = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_3e5b2d88da4e41acb7faa96c0d99e28f.setIcon(icon_716e383ab7334d71b49178cd6acd10ec);
+        
+    
+        var popup_9145ae9d094146c9bc859e589a820b6e = L.popup({"maxWidth": "100%"});
+
+        
+            var html_13cf8a65a8124696bb59083e4d07c856 = $(`<div id="html_13cf8a65a8124696bb59083e4d07c856" style="width: 100.0%; height: 100.0%;"><b>Station Name: </b>HASTANE<br> <img src=https://static.karar.com/img/682x350/18-04/11/annn.jpg height=250 width=400></div>`)[0];
+            popup_9145ae9d094146c9bc859e589a820b6e.setContent(html_13cf8a65a8124696bb59083e4d07c856);
+        
+
+        marker_3e5b2d88da4e41acb7faa96c0d99e28f.bindPopup(popup_9145ae9d094146c9bc859e589a820b6e)
+        ;
+
+        
+    
+    
+            var marker_a81cc41a40b048388993a91df46236d7 = L.marker(
+                [39.96538904020867, 32.79435306787491],
+                {}
+            ).addTo(feature_group_a5cef84e234b4944a57d7d4ce7867d14);
+        
+    
+            var icon_88b75e2170944d8aaf450c8978922c15 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_a81cc41a40b048388993a91df46236d7.setIcon(icon_88b75e2170944d8aaf450c8978922c15);
+        
+    
+        var popup_d5b762b91067444db8f59b26ea3683d8 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_8264753b22694ca09b692cfb42faca25 = $(`<div id="html_8264753b22694ca09b692cfb42faca25" style="width: 100.0%; height: 100.0%;"><b>Station Name: </b>DEMETEVLER<br> <img src=https://fastly.4sqi.net/img/general/200x200/62394193_ea3DLMn8dOGw27evaQ4l9F8axDMpvAyCAADOxUUcmZ4.jpg height=250 width=400></div>`)[0];
+            popup_d5b762b91067444db8f59b26ea3683d8.setContent(html_8264753b22694ca09b692cfb42faca25);
+        
+
+        marker_a81cc41a40b048388993a91df46236d7.bindPopup(popup_d5b762b91067444db8f59b26ea3683d8)
+        ;
+
+        
+    
+    
+            var marker_cdaeb514b7fa44eba7a20e65d113b2cd = L.marker(
+                [39.961948685450935, 32.804522998631],
+                {}
+            ).addTo(feature_group_a5cef84e234b4944a57d7d4ce7867d14);
+        
+    
+            var icon_5750ccdbd67c4ef382f8e19a225000a0 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_cdaeb514b7fa44eba7a20e65d113b2cd.setIcon(icon_5750ccdbd67c4ef382f8e19a225000a0);
+        
+    
+        var popup_0865a0208510464e84db14478d5a0393 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_ea3689ec263d4001bd9b65ffef02842f = $(`<div id="html_ea3689ec263d4001bd9b65ffef02842f" style="width: 100.0%; height: 100.0%;"><b>Station Name: </b>YENİMAHALLE<br> <img src=https://i1.wp.com/rayhaber.com/wp-content/uploads/2019/07/yenimahalle-sentepe-teleferik-hattinin-iki-istasyonunda-bakim-molasi.jpg?fit=678%2C381&ssl=1&resize=692%2C376 height=250 width=400></div>`)[0];
+            popup_0865a0208510464e84db14478d5a0393.setContent(html_ea3689ec263d4001bd9b65ffef02842f);
+        
+
+        marker_cdaeb514b7fa44eba7a20e65d113b2cd.bindPopup(popup_0865a0208510464e84db14478d5a0393)
+        ;
+
+        
+    
+    
+            var marker_50eac7ff513f42aaa059d741887b04db = L.marker(
+                [39.95716947099525, 32.81702410429716],
+                {}
+            ).addTo(feature_group_a5cef84e234b4944a57d7d4ce7867d14);
+        
+    
+            var icon_3ea9c9d802624325a3a4eab62229620e = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_50eac7ff513f42aaa059d741887b04db.setIcon(icon_3ea9c9d802624325a3a4eab62229620e);
+        
+    
+        var popup_3b17159d9f0f4f459eeddb45ab600dbc = L.popup({"maxWidth": "100%"});
+
+        
+            var html_31599a12f07c4f66a03822e2c2c10f36 = $(`<div id="html_31599a12f07c4f66a03822e2c2c10f36" style="width: 100.0%; height: 100.0%;"><b>Station Name: </b>İVEDİK<br> <img src=https://eryaman.org/wp-content/uploads/2018/04/ivedik-metrosu.jpg height=250 width=400></div>`)[0];
+            popup_3b17159d9f0f4f459eeddb45ab600dbc.setContent(html_31599a12f07c4f66a03822e2c2c10f36);
+        
+
+        marker_50eac7ff513f42aaa059d741887b04db.bindPopup(popup_3b17159d9f0f4f459eeddb45ab600dbc)
+        ;
+
+        
+    
+    
+            var marker_1ab19335040242c1b119de58780710f7 = L.marker(
+                [39.95156284194417, 32.8342254459858],
+                {}
+            ).addTo(feature_group_a5cef84e234b4944a57d7d4ce7867d14);
+        
+    
+            var icon_e6a79289af054a579d37d39879961665 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_1ab19335040242c1b119de58780710f7.setIcon(icon_e6a79289af054a579d37d39879961665);
+        
+    
+        var popup_ea1609453eb746358646d4e5112e34ce = L.popup({"maxWidth": "100%"});
+
+        
+            var html_53c173a9ce944381a59a22147d43c308 = $(`<div id="html_53c173a9ce944381a59a22147d43c308" style="width: 100.0%; height: 100.0%;"><b>Station Name: </b>AKKÖPRÜ<br> <img src=https://fastly.4sqi.net/img/general/200x200/6335959_3ogYZWFwfEvhNYQ1fRAWcA13OtKH_sf7vb8OSc7KBNg.jpg height=250 width=400></div>`)[0];
+            popup_ea1609453eb746358646d4e5112e34ce.setContent(html_53c173a9ce944381a59a22147d43c308);
+        
+
+        marker_1ab19335040242c1b119de58780710f7.bindPopup(popup_ea1609453eb746358646d4e5112e34ce)
+        ;
+
+        
+    
+    
+            var marker_edcc307384044ac4b5b4081f733536f3 = L.marker(
+                [39.94435257864009, 32.84404367208481],
+                {}
+            ).addTo(feature_group_a5cef84e234b4944a57d7d4ce7867d14);
+        
+    
+            var icon_ae487cd72b6e464789aaaaa2338f55ea = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_edcc307384044ac4b5b4081f733536f3.setIcon(icon_ae487cd72b6e464789aaaaa2338f55ea);
+        
+    
+        var popup_ffa07819a6bf440c8f37228c40c11abc = L.popup({"maxWidth": "100%"});
+
+        
+            var html_e39d07ab28904ff5bd93ecd0c272f8be = $(`<div id="html_e39d07ab28904ff5bd93ecd0c272f8be" style="width: 100.0%; height: 100.0%;"><b>Station Name: </b>AKM<br> <img src=https://gazeteistanbul.com/wp-content/uploads/2018/12/ankarada_metro_istasyonunda_intihar.jpg height=250 width=400></div>`)[0];
+            popup_ffa07819a6bf440c8f37228c40c11abc.setContent(html_e39d07ab28904ff5bd93ecd0c272f8be);
+        
+
+        marker_edcc307384044ac4b5b4081f733536f3.bindPopup(popup_ffa07819a6bf440c8f37228c40c11abc)
+        ;
+
+        
+    
+    
+            var marker_5312ac9dae894f38a74d8f406283eb90 = L.marker(
+                [39.93967932996925, 32.850411906838424],
+                {}
+            ).addTo(feature_group_a5cef84e234b4944a57d7d4ce7867d14);
+        
+    
+            var icon_600fc7e7b6eb478e8c9e6775cce443cd = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_5312ac9dae894f38a74d8f406283eb90.setIcon(icon_600fc7e7b6eb478e8c9e6775cce443cd);
+        
+    
+        var popup_6c65cda599724bffab28d876a14635a7 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_12e5f1696d8e45d39f36f945e946ee96 = $(`<div id="html_12e5f1696d8e45d39f36f945e946ee96" style="width: 100.0%; height: 100.0%;"><b>Station Name: </b>ULUS<br> <img src=https://fastly.4sqi.net/img/general/200x200/62021402_-Bff7iTdaMxqnG-PkC2mvOlD7Qh75y2QHrVKYw1MjmA.jpg height=250 width=400></div>`)[0];
+            popup_6c65cda599724bffab28d876a14635a7.setContent(html_12e5f1696d8e45d39f36f945e946ee96);
+        
+
+        marker_5312ac9dae894f38a74d8f406283eb90.bindPopup(popup_6c65cda599724bffab28d876a14635a7)
+        ;
+
+        
+    
+    
+            var marker_5709c3d710974e68a10eb743098f1be1 = L.marker(
+                [39.92815241835969, 32.855083979666226],
+                {}
+            ).addTo(feature_group_a5cef84e234b4944a57d7d4ce7867d14);
+        
+    
+            var icon_c5b3bb0864524da9ae3464d7a3b345f1 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_5709c3d710974e68a10eb743098f1be1.setIcon(icon_c5b3bb0864524da9ae3464d7a3b345f1);
+        
+    
+        var popup_9e52f0f227424604a44cbe8d87e78a28 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_45e2b4d7da664485be1ef0e7ddfd5b88 = $(`<div id="html_45e2b4d7da664485be1ef0e7ddfd5b88" style="width: 100.0%; height: 100.0%;"><b>Station Name: </b>SIHHIYE<br> <img src=https://fastly.4sqi.net/img/general/200x200/130229472_i5XvBcRdVXdb4DUry2i7pqGwwwKO49ao-rElQ-OqvXQ.jpg height=250 width=400></div>`)[0];
+            popup_9e52f0f227424604a44cbe8d87e78a28.setContent(html_45e2b4d7da664485be1ef0e7ddfd5b88);
+        
+
+        marker_5709c3d710974e68a10eb743098f1be1.bindPopup(popup_9e52f0f227424604a44cbe8d87e78a28)
+        ;
+
+        
+    
+    
+            var marker_c1871adc94cb45aeb1446eaa350dfe1c = L.marker(
+                [39.920836577438685, 32.854061722755425],
+                {}
+            ).addTo(feature_group_a5cef84e234b4944a57d7d4ce7867d14);
+        
+    
+            var icon_c036a97fe12447d2aa9ca80c00d97119 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_c1871adc94cb45aeb1446eaa350dfe1c.setIcon(icon_c036a97fe12447d2aa9ca80c00d97119);
+        
+    
+        var popup_1f87d00ea1a94dfe8ecc0b24620e6d4d = L.popup({"maxWidth": "100%"});
+
+        
+            var html_865dbb21884c476788624eb0a0dab890 = $(`<div id="html_865dbb21884c476788624eb0a0dab890" style="width: 100.0%; height: 100.0%;"><b>Station Name: </b>KIZILAY<br> <img src=https://foto.haberler.com/haber/2019/07/04/kizilay-da-metro-girisine-agac-devrildi-11196370_o.jpg height=250 width=400></div>`)[0];
+            popup_1f87d00ea1a94dfe8ecc0b24620e6d4d.setContent(html_865dbb21884c476788624eb0a0dab890);
+        
+
+        marker_c1871adc94cb45aeb1446eaa350dfe1c.bindPopup(popup_1f87d00ea1a94dfe8ecc0b24620e6d4d)
+        ;
+
+        
+    
+    
+            var marker_876f15b2435048c8aca65951a3ba4b6d = L.marker(
+                [39.91524574325648, 32.84345358610153],
+                {}
+            ).addTo(feature_group_a5cef84e234b4944a57d7d4ce7867d14);
+        
+    
+            var icon_76e31f9c4c34470b9df22bf209697bed = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_876f15b2435048c8aca65951a3ba4b6d.setIcon(icon_76e31f9c4c34470b9df22bf209697bed);
+        
+    
+        var popup_b67b0e9643c54199b0d89d173dbacf62 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_baf276d2b0544ef0bdcbc6505ee12b86 = $(`<div id="html_baf276d2b0544ef0bdcbc6505ee12b86" style="width: 100.0%; height: 100.0%;"><b>Station Name: </b>NECATİBEY<br> <img src=https://upload.wikimedia.org/wikipedia/commons/thumb/5/51/%C3%87ayyolu_Metro_9.JPG/2448px-%C3%87ayyolu_Metro_9.JPG height=250 width=400></div>`)[0];
+            popup_b67b0e9643c54199b0d89d173dbacf62.setContent(html_baf276d2b0544ef0bdcbc6505ee12b86);
+        
+
+        marker_876f15b2435048c8aca65951a3ba4b6d.bindPopup(popup_b67b0e9643c54199b0d89d173dbacf62)
+        ;
+
+        
+    
+    
+            var marker_e63e826018f848b88f7e7db1735ef85c = L.marker(
+                [39.91570322034185, 32.82810464501381],
+                {}
+            ).addTo(feature_group_a5cef84e234b4944a57d7d4ce7867d14);
+        
+    
+            var icon_51bba776d8204ff498f91bea441b3f11 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_e63e826018f848b88f7e7db1735ef85c.setIcon(icon_51bba776d8204ff498f91bea441b3f11);
+        
+    
+        var popup_f92dd54084434f6a86d02617e1796cd4 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_cd4cd04912c047cdad0fb2037e49af14 = $(`<div id="html_cd4cd04912c047cdad0fb2037e49af14" style="width: 100.0%; height: 100.0%;"><b>Station Name: </b>MİLLİKÜTÜPHANE<br> <img src=https://fastly.4sqi.net/img/general/200x200/17150447_KY9dgmLb7W5_6Vq01ABVGXRliY9H9y_OvLgDb5PeR2g.jpg height=250 width=400></div>`)[0];
+            popup_f92dd54084434f6a86d02617e1796cd4.setContent(html_cd4cd04912c047cdad0fb2037e49af14);
+        
+
+        marker_e63e826018f848b88f7e7db1735ef85c.bindPopup(popup_f92dd54084434f6a86d02617e1796cd4)
+        ;
+
+        
+    
+    
+            var marker_1be56ab7a7624d0f8b99a39cfe757d4c = L.marker(
+                [39.91088399967586, 32.807790599763386],
+                {}
+            ).addTo(feature_group_a5cef84e234b4944a57d7d4ce7867d14);
+        
+    
+            var icon_a410bdae41b34792a55ebc0bbd205f41 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_1be56ab7a7624d0f8b99a39cfe757d4c.setIcon(icon_a410bdae41b34792a55ebc0bbd205f41);
+        
+    
+        var popup_e6baddcaad5048a48755c7c19b82e2c5 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_66cadaa896e84a22a8f4f1665192ba4e = $(`<div id="html_66cadaa896e84a22a8f4f1665192ba4e" style="width: 100.0%; height: 100.0%;"><b>Station Name: </b>SÖĞÜTÖZÜ<br> <img src=https://www.uretenankara.com/images/haberler/sogutozu-metro-istasyonunda-degisen-sadece-kovalar_ureten_ankara.jpg height=250 width=400></div>`)[0];
+            popup_e6baddcaad5048a48755c7c19b82e2c5.setContent(html_66cadaa896e84a22a8f4f1665192ba4e);
+        
+
+        marker_1be56ab7a7624d0f8b99a39cfe757d4c.bindPopup(popup_e6baddcaad5048a48755c7c19b82e2c5)
+        ;
+
+        
+    
+    
+            var marker_7872368225bd474c8a60705812acf5ce = L.marker(
+                [39.90889989434293, 32.79637511819601],
+                {}
+            ).addTo(feature_group_a5cef84e234b4944a57d7d4ce7867d14);
+        
+    
+            var icon_5c48d08e5d5241de9cd5a5f715831791 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_7872368225bd474c8a60705812acf5ce.setIcon(icon_5c48d08e5d5241de9cd5a5f715831791);
+        
+    
+        var popup_e6f1f51a1b544c33bc2365cc0822b175 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_d24862d191814e4398647ae665494f44 = $(`<div id="html_d24862d191814e4398647ae665494f44" style="width: 100.0%; height: 100.0%;"><b>Station Name: </b>MTA<br> <img src=https://fastly.4sqi.net/img/general/600x600/134364249_Kh4uBMmLD3m-5mPVRbQaCgL254SkvSFiURIKyOkR9hM.jpg height=250 width=400></div>`)[0];
+            popup_e6f1f51a1b544c33bc2365cc0822b175.setContent(html_d24862d191814e4398647ae665494f44);
+        
+
+        marker_7872368225bd474c8a60705812acf5ce.bindPopup(popup_e6f1f51a1b544c33bc2365cc0822b175)
+        ;
+
+        
+    
+    
+            var marker_65f24ab0129e4607b052ae10f37d0a39 = L.marker(
+                [39.90834695779578, 32.783899828791625],
+                {}
+            ).addTo(feature_group_a5cef84e234b4944a57d7d4ce7867d14);
+        
+    
+            var icon_56e90153381f4b8b9d7f1ba6b0baae41 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_65f24ab0129e4607b052ae10f37d0a39.setIcon(icon_56e90153381f4b8b9d7f1ba6b0baae41);
+        
+    
+        var popup_1359c20f84f44601b49b49ceac9a5dc1 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_4184c37929104919b6f84dc330a46079 = $(`<div id="html_4184c37929104919b6f84dc330a46079" style="width: 100.0%; height: 100.0%;"><b>Station Name: </b>ODTÜ<br> <img src=https://i.imgur.com/OPUNVys.jpg height=250 width=400></div>`)[0];
+            popup_1359c20f84f44601b49b49ceac9a5dc1.setContent(html_4184c37929104919b6f84dc330a46079);
+        
+
+        marker_65f24ab0129e4607b052ae10f37d0a39.bindPopup(popup_1359c20f84f44601b49b49ceac9a5dc1)
+        ;
+
+        
+    
+    
+            var marker_e272da3e966c4669a723b013016603f5 = L.marker(
+                [39.90758827015414, 32.765828780829914],
+                {}
+            ).addTo(feature_group_a5cef84e234b4944a57d7d4ce7867d14);
+        
+    
+            var icon_321ae9392e884fc9bd83ae06fc96b907 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_e272da3e966c4669a723b013016603f5.setIcon(icon_321ae9392e884fc9bd83ae06fc96b907);
+        
+    
+        var popup_48ee0f92b3cd45748c29b6e3886d8d9e = L.popup({"maxWidth": "100%"});
+
+        
+            var html_ccadfe4cd5c14b0499579f1a74e3037d = $(`<div id="html_ccadfe4cd5c14b0499579f1a74e3037d" style="width: 100.0%; height: 100.0%;"><b>Station Name: </b>BİLKENT<br> <img src=https://assets.change.org/photos/1/wk/is/ZQWkISFVxyoRpfM-800x450-noPad.jpg?1529667380 height=250 width=400></div>`)[0];
+            popup_48ee0f92b3cd45748c29b6e3886d8d9e.setContent(html_ccadfe4cd5c14b0499579f1a74e3037d);
+        
+
+        marker_e272da3e966c4669a723b013016603f5.bindPopup(popup_48ee0f92b3cd45748c29b6e3886d8d9e)
+        ;
+
+        
+    
+    
+            var marker_b4b7a9589a1a4e86b74e110b49116978 = L.marker(
+                [39.906958424437406, 32.75007650256157],
+                {}
+            ).addTo(feature_group_a5cef84e234b4944a57d7d4ce7867d14);
+        
+    
+            var icon_402c49545b134c26b982af76770130e3 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_b4b7a9589a1a4e86b74e110b49116978.setIcon(icon_402c49545b134c26b982af76770130e3);
+        
+    
+        var popup_8aba41399eb44ae080abf3883ac15589 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_55b533141bd0432c97d718e4a64debf6 = $(`<div id="html_55b533141bd0432c97d718e4a64debf6" style="width: 100.0%; height: 100.0%;"><b>Station Name: </b>TARIM BAKANLIĞIDANIŞTAY<br> <img src=https://www.alfahaberajansi.com/images/haberler/2019/11/ankara_metro_hatlari_duraklari_ve_rayli_sistemler_haritasi_h5_50224.jpg height=250 width=400></div>`)[0];
+            popup_8aba41399eb44ae080abf3883ac15589.setContent(html_55b533141bd0432c97d718e4a64debf6);
+        
+
+        marker_b4b7a9589a1a4e86b74e110b49116978.bindPopup(popup_8aba41399eb44ae080abf3883ac15589)
+        ;
+
+        
+    
+    
+            var marker_2149a433fb144d46ba16e0c1454f4c53 = L.marker(
+                [39.906252702308606, 32.73306861519813],
+                {}
+            ).addTo(feature_group_a5cef84e234b4944a57d7d4ce7867d14);
+        
+    
+            var icon_4fe15ee624d049f8ae5012795df1c99d = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_2149a433fb144d46ba16e0c1454f4c53.setIcon(icon_4fe15ee624d049f8ae5012795df1c99d);
+        
+    
+        var popup_b3a3535b1dba42839a12988e5e6379f1 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_67dfd53149674d909b18fdf0fd129f72 = $(`<div id="html_67dfd53149674d909b18fdf0fd129f72" style="width: 100.0%; height: 100.0%;"><b>Station Name: </b>BEYTEPE<br> <img src=https://laankara.com/wp-content/uploads/2018/10/Beytepe-Metro-Ankara.jpg height=250 width=400></div>`)[0];
+            popup_b3a3535b1dba42839a12988e5e6379f1.setContent(html_67dfd53149674d909b18fdf0fd129f72);
+        
+
+        marker_2149a433fb144d46ba16e0c1454f4c53.bindPopup(popup_b3a3535b1dba42839a12988e5e6379f1)
+        ;
+
+        
+    
+    
+            var marker_e786b9098b9344818265f7aab4ba8b91 = L.marker(
+                [39.90527975058802, 32.707952074706554],
+                {}
+            ).addTo(feature_group_a5cef84e234b4944a57d7d4ce7867d14);
+        
+    
+            var icon_6a7be575e9324eaba3e6c3250e150b73 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_e786b9098b9344818265f7aab4ba8b91.setIcon(icon_6a7be575e9324eaba3e6c3250e150b73);
+        
+    
+        var popup_ae43b457ed6442cb94b370a9905f22ba = L.popup({"maxWidth": "100%"});
+
+        
+            var html_59cf1f9115284629bb50c2cfd3c1f541 = $(`<div id="html_59cf1f9115284629bb50c2cfd3c1f541" style="width: 100.0%; height: 100.0%;"><b>Station Name: </b>ÜMİTKÖY<br> <img src=https://www.alocayyolu.com/wp-content/uploads/%C3%A7ayyolu-metro-otob%C3%BCs-dolmu%C5%9F-duraklar%C4%B1.png height=250 width=400></div>`)[0];
+            popup_ae43b457ed6442cb94b370a9905f22ba.setContent(html_59cf1f9115284629bb50c2cfd3c1f541);
+        
+
+        marker_e786b9098b9344818265f7aab4ba8b91.bindPopup(popup_ae43b457ed6442cb94b370a9905f22ba)
+        ;
+
+        
+    
+    
+            var marker_bc1151a076b94356a298330420848dbf = L.marker(
+                [39.897497954404066, 32.692014388740056],
+                {}
+            ).addTo(feature_group_a5cef84e234b4944a57d7d4ce7867d14);
+        
+    
+            var icon_e0001e960c4742d2be5850e387e843ee = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_bc1151a076b94356a298330420848dbf.setIcon(icon_e0001e960c4742d2be5850e387e843ee);
+        
+    
+        var popup_5c3f0dc0ab104cb995b67a419d3ee044 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_00af226ee42c4dd0852085daf5eb6071 = $(`<div id="html_00af226ee42c4dd0852085daf5eb6071" style="width: 100.0%; height: 100.0%;"><b>Station Name: </b>ÇAYYOLU<br> <img src=https://www.alfahaberajansi.com/images/haberler/2019/11/ankara_metro_hatlari_duraklari_ve_rayli_sistemler_haritasi_h5_50224.jpg height=250 width=400></div>`)[0];
+            popup_5c3f0dc0ab104cb995b67a419d3ee044.setContent(html_00af226ee42c4dd0852085daf5eb6071);
+        
+
+        marker_bc1151a076b94356a298330420848dbf.bindPopup(popup_5c3f0dc0ab104cb995b67a419d3ee044)
+        ;
+
+        
+    
+    
+            var marker_8879a751746744dcbd424af638c51dfa = L.marker(
+                [39.88688983115354, 32.68642030656337],
+                {}
+            ).addTo(feature_group_a5cef84e234b4944a57d7d4ce7867d14);
+        
+    
+            var icon_fb1d296c008c4c43a341268f46448ce7 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_8879a751746744dcbd424af638c51dfa.setIcon(icon_fb1d296c008c4c43a341268f46448ce7);
+        
+    
+        var popup_62c011be52ea49109ccf9bbd807c60a3 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_a73821a8a892423d8491ec25eccedf48 = $(`<div id="html_a73821a8a892423d8491ec25eccedf48" style="width: 100.0%; height: 100.0%;"><b>Station Name: </b>KORU<br> <img src=https://3.bp.blogspot.com/-mxykS57gtVo/U_tvWPqfZoI/AAAAAAAAAEw/VRFrhaKnTV4/s1600/baglica-ulasim-cayyolu-metrosu-koru-istasyonu-baglica-etimesgut-ahimesut-topcu-mahallesi-ring-seferi-597-ego-hatti-05.jpg height=250 width=400></div>`)[0];
+            popup_62c011be52ea49109ccf9bbd807c60a3.setContent(html_a73821a8a892423d8491ec25eccedf48);
+        
+
+        marker_8879a751746744dcbd424af638c51dfa.bindPopup(popup_62c011be52ea49109ccf9bbd807c60a3)
+        ;
+
+        
+    
+</script>
